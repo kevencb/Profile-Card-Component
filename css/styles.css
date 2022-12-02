@@ -1,0 +1,106 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(185deg, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-position: right 45vw bottom 32vh, left 38vw top 42vh;
+  background-repeat: no-repeat, no-repeat;
+  color: hsl(0deg, 0%, 59%);
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  body {
+    background-position: right 54vw bottom 32vh, left 49vw top 48vh;
+  }
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 5rem);
+  justify-content: center;
+}
+
+.profile {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1.6rem;
+  box-shadow: 0 2rem 4rem hsla(229deg, 23%, 23%, 0.4);
+  display: grid;
+  font-size: 1.8rem;
+  grid-template-areas: "photo photo photo" "info info info" "data data data";
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 2fr 1fr;
+  height: 37.5rem;
+  justify-content: center;
+  max-width: 350px;
+  overflow: hidden;
+  width: 90%;
+}
+
+.profile__photo {
+  align-self: stretch;
+  background-image: url("../images/bg-pattern-card.svg");
+  grid-area: photo;
+  position: relative;
+}
+.profile__photo img {
+  border: 0.5rem solid #fff;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 9rem;
+  transform: translatex(-50%);
+}
+
+.profile__info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: info;
+}
+.profile__info h2 {
+  color: hsl(229deg, 23%, 23%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 4.2rem 0 0.8rem;
+}
+.profile__info h2 span {
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 400;
+  margin-left: 1rem;
+}
+.profile__info h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 0rem;
+}
+
+.profile__data {
+  align-items: center;
+  border-top: 1px solid hsla(0deg, 0%, 59%, 0.3);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2.4rem 0;
+  text-align: center;
+}
+.profile__data h2 {
+  color: hsl(229deg, 23%, 23%);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.profile__data h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}/*# sourceMappingURL=styles.css.map */

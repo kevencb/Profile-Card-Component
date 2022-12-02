@@ -1,0 +1,114 @@
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$darkGrayishBlue: hsl(227, 10%, 46%);
+$darkGray: hsl(0, 0%, 59%);
+$white: #fff;
+$fontPrincipal: 'Kumbh Sans', sans-serif;
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: $darkCyan;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-position: right 45vw bottom 32vh, left 38vw top 42vh;;
+    background-repeat: no-repeat, no-repeat;
+    color: $darkGray;
+    font-family: $fontPrincipal;
+    font-weight: 400;
+    @media (min-width: 768px) {
+        background-position: right 54vw bottom 32vh, left 49vw top 48vh;
+    }
+}
+
+main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 5rem);
+    justify-content: center;
+}
+
+.profile{
+    align-items: center;
+    background-color: $white;
+    border-radius: 1.6rem;
+    box-shadow: 0 2rem 4rem hsl(229, 23%, 23%, .4);
+    display: grid;
+    font-size: 1.8rem;
+    grid-template-areas:
+        "photo photo photo"
+        "info info info"
+        "data data data"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
+    height: 37.5rem;
+    justify-content: center;
+    max-width: 350px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.profile__photo{
+    align-self: stretch;
+    background-image: url('../images/bg-pattern-card.svg');
+    grid-area: photo;
+    position: relative;
+    img{
+        border: 0.5rem solid $white;
+        border-radius: 50%;
+        left: 50%;
+        position: absolute;
+        top: 9rem;
+        transform: translatex(-50%);
+    }
+}
+
+.profile__info{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: info;
+    h2{
+        color: $veryDarkDesaturatedBlue;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 4.2rem 0 .8rem;
+        span{
+            color: $darkGray;
+            font-weight: 400;
+            margin-left: 1rem;
+        }
+    }
+    h3{
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-top: 0rem;
+    }
+}
+.profile__data{
+    align-items: center;
+    border-top: 1px solid hsl(0, 0%, 59%, 0.3);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2.4rem 0;
+    text-align: center;
+    h2{
+        color: $veryDarkDesaturatedBlue;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    h4{
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+    }
+}
